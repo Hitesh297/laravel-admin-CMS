@@ -57,12 +57,12 @@ class ExperiencesController extends Controller {
             'endDate' => 'required'
         ] );
 
-        $experience->content = $attributes[ 'companyName' ];
-        $experience->content = $attributes[ 'position' ];
-        $experience->content = $attributes[ 'duration' ];
-        $experience->content = $attributes[ 'responsibilities' ];
-        $experience->content = $attributes[ 'startDate' ];
-        $experience->type = $attributes[ 'endDate' ];
+        $experience->companyName = $attributes[ 'companyName' ];
+        $experience->position = $attributes[ 'position' ];
+        $experience->duration = $attributes[ 'duration' ];
+        $experience->responsibilities = $attributes[ 'responsibilities' ];
+        $experience->startDate = $attributes[ 'startDate' ];
+        $experience->endDate = $attributes[ 'endDate' ];
         $experience->save();
 
         return redirect( '/console/experiences/list' )

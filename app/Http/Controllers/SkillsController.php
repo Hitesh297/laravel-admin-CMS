@@ -55,9 +55,9 @@ class SkillsController extends Controller {
         ] );
 
         $skill->type = $attributes[ 'type' ];
-        $skill->skill = $attributes[ 'details' ];
-        $skill->skill = $attributes[ 'sequence' ];
-        $skill->skill = $attributes[ 'fontawesomeHTML' ];
+        $skill->details = $attributes[ 'details' ];
+        $skill->sequence = $attributes[ 'sequence' ];
+        $skill->fontawesomeHTML = $attributes[ 'fontawesomeHTML' ];
         $skill->save();
 
         return redirect( '/console/skills/list' )
