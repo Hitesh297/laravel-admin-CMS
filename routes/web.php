@@ -86,3 +86,14 @@ Route::get('/console/qualifications/edit/{qualification:id}', [ExperiencesContro
 Route::post('/console/qualifications/edit/{qualification:id}', [ExperiencesController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
 Route::get('/console/qualifications/delete/{qualification:id}', [ExperiencesController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
 
+Route::get('/console/socialmedias/list', [SocialmediasController::class, 'list'])->middleware('auth');
+Route::get('/console/socialmedias/add', [SocialmediasController::class, 'addForm'])->middleware('auth');
+Route::post('/console/socialmedias/add', [SocialmediasController::class, 'add'])->middleware('auth');
+Route::get('/console/socialmedias/edit/{socialmedia:id}', [SocialmediasController::class, 'editForm'])->where('project', '[0-9]+')->middleware('auth');
+Route::post('/console/socialmedias/edit/{socialmedia:id}', [SocialmediasController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
+Route::get('/console/socialmedias/delete/{socialmedia:id}', [SocialmediasController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
+
+Route::get('/console/contactforms/list', [ContactformsController::class, 'list'])->middleware('auth');
+Route::get('/console/contactforms/add', [ContactformsController::class, 'addForm'])->middleware('auth');
+Route::post('/console/contactforms/add', [ContactformsController::class, 'add'])->middleware('auth');
+
