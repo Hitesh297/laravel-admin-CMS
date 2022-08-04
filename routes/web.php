@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ContentsController;
+use App\Http\Controllers\SkillsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,10 @@ Route::post('/console/textcontents/add', [ContentsController::class, 'add'])->mi
 Route::get('/console/textcontents/edit/{content:id}', [ContentsController::class, 'editForm'])->where('project', '[0-9]+')->middleware('auth');
 Route::post('/console/textcontents/edit/{content:id}', [ContentsController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
 Route::get('/console/textcontents/delete/{content:id}', [ContentsController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
+
+Route::get('/console/skills/list', [SkillsController::class, 'list'])->middleware('auth');
+Route::get('/console/skills/add', [SkillsController::class, 'addForm'])->middleware('auth');
+Route::post('/console/skills/add', [SkillsController::class, 'add'])->middleware('auth');
+Route::get('/console/skills/edit/{skill:id}', [SkillsController::class, 'editForm'])->where('project', '[0-9]+')->middleware('auth');
+Route::post('/console/skills/edit/{skill:id}', [SkillsController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
+Route::get('/console/skills/delete/{skill:id}', [SkillsController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
