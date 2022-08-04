@@ -71,3 +71,10 @@ Route::post('/console/skills/add', [SkillsController::class, 'add'])->middleware
 Route::get('/console/skills/edit/{skill:id}', [SkillsController::class, 'editForm'])->where('project', '[0-9]+')->middleware('auth');
 Route::post('/console/skills/edit/{skill:id}', [SkillsController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
 Route::get('/console/skills/delete/{skill:id}', [SkillsController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
+
+Route::get('/console/experiences/list', [ExperiencesController::class, 'list'])->middleware('auth');
+Route::get('/console/experiences/add', [ExperiencesController::class, 'addForm'])->middleware('auth');
+Route::post('/console/experiences/add', [ExperiencesController::class, 'add'])->middleware('auth');
+Route::get('/console/experiences/edit/{experience:id}', [ExperiencesController::class, 'editForm'])->where('project', '[0-9]+')->middleware('auth');
+Route::post('/console/experiences/edit/{experience:id}', [ExperiencesController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
+Route::get('/console/experiences/delete/{experience:id}', [ExperiencesController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
