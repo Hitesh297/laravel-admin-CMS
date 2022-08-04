@@ -8,6 +8,7 @@
     <title>My Portfolio</title>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script async defer src="https://kit.fontawesome.com/08690c32d6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
     <link rel="stylesheet" href="<?= url('app.css') ?>">
 
