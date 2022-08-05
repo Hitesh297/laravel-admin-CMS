@@ -1,8 +1,8 @@
 <?= view('layout.header') ?>
 
         <?php if(session()->has('message')): ?>
-            <div class="w3-padding w3-margin-top w3-margin-bottom">
-                <div class="w3-red w3-center w3-padding"><?= session()->get('message') ?></div>
+            <div class="alert-strip">
+                <div class="alert-msg"><?= session()->get('message') ?></div>
             </div>
         <?php endif; ?>
 
@@ -41,7 +41,6 @@
 </table>
 
 <p><a href="/console/experiences/add"><i class="fas fa-plus-square"></i> Add Experience</a></p>
-            <!-- <p><a href="/console/experiences/add"><i class="fas fa-plus-square"></i> Add Skill</a></p> -->
 
         </section>
 

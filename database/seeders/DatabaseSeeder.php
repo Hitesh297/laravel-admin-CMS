@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Contactform;
 use App\Models\Content;
 use Illuminate\Database\Seeder;
 use App\Models\User;
@@ -27,6 +28,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         User::factory()->count(2)->create();
+        Contactform::factory()->count(5)->create();
         User::create(['first' => 'Hitesh',
         'last' => 'Patel',
         'email' => 'hites.297@gmail.com',

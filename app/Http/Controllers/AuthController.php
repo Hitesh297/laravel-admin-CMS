@@ -10,7 +10,7 @@ class AuthController extends Controller
     public function logout()
     {
         auth()->logout();
-        return redirect('/');
+        return redirect('/auth/login');
     }
     
     public function loginForm()
