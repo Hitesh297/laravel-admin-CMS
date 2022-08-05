@@ -7,6 +7,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ContentsController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\ExperiencesController;
+use App\Http\Controllers\QualificationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,12 +81,12 @@ Route::get('/console/experiences/edit/{experience:id}', [ExperiencesController::
 Route::post('/console/experiences/edit/{experience:id}', [ExperiencesController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
 Route::get('/console/experiences/delete/{experience:id}', [ExperiencesController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
 
-Route::get('/console/qualifications/list', [ExperiencesController::class, 'list'])->middleware('auth');
-Route::get('/console/qualifications/add', [ExperiencesController::class, 'addForm'])->middleware('auth');
-Route::post('/console/qualifications/add', [ExperiencesController::class, 'add'])->middleware('auth');
-Route::get('/console/qualifications/edit/{qualification:id}', [ExperiencesController::class, 'editForm'])->where('project', '[0-9]+')->middleware('auth');
-Route::post('/console/qualifications/edit/{qualification:id}', [ExperiencesController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
-Route::get('/console/qualifications/delete/{qualification:id}', [ExperiencesController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
+Route::get('/console/qualifications/list', [QualificationsController::class, 'list'])->middleware('auth');
+Route::get('/console/qualifications/add', [QualificationsController::class, 'addForm'])->middleware('auth');
+Route::post('/console/qualifications/add', [QualificationsController::class, 'add'])->middleware('auth');
+Route::get('/console/qualifications/edit/{qualification:id}', [QualificationsController::class, 'editForm'])->where('project', '[0-9]+')->middleware('auth');
+Route::post('/console/qualifications/edit/{qualification:id}', [QualificationsController::class, 'edit'])->where('project', '[0-9]+')->middleware('auth');
+Route::get('/console/qualifications/delete/{qualification:id}', [QualificationsController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
 
 Route::get('/console/socialmedias/list', [SocialmediasController::class, 'list'])->middleware('auth');
 Route::get('/console/socialmedias/add', [SocialmediasController::class, 'addForm'])->middleware('auth');

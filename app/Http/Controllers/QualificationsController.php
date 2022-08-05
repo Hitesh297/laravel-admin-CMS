@@ -7,14 +7,14 @@ use App\Models\Qualification;
 
 class QualificationsController extends Controller {
     public function list() {
-        return view( 'qualification.list', [
+        return view( 'qualifications.list', [
             'qualifications' => Qualification::all()
 
         ] );
     }
 
     public function addForm() {
-        return view( 'qualification.add' );
+        return view( 'qualifications.add' );
     }
 
     public function add() {
@@ -32,7 +32,7 @@ class QualificationsController extends Controller {
 
         $qualification->save();
 
-        return redirect( '/console/qualification/list' )
+        return redirect( '/console/qualifications/list' )
         ->with( 'message', 'Qualification has been added!' );
     }
 
