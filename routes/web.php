@@ -8,6 +8,7 @@ use App\Http\Controllers\ContentsController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\ExperiencesController;
 use App\Http\Controllers\QualificationsController;
+use App\Http\Controllers\SocialmediasController;
 
 /*
 |--------------------------------------------------------------------------

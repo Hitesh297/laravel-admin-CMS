@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Socialmedia extends Model {
     use HasFactory;
+    protected $table = 'socialmedias';
     public $timestamps = false;
 }

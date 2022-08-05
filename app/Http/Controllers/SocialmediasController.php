@@ -7,14 +7,14 @@ use App\Models\Socialmedia;
 
 class SocialmediasController extends Controller {
     public function list() {
-        return view( 'Socialmedias.list', [
+        return view( 'socialmedias.list', [
             'socialmedias' => Socialmedia::all()
 
         ] );
     }
 
     public function addForm() {
-        return view( 'Socialmedias.add' );
+        return view( 'socialmedias.add' );
     }
 
     public function add() {
@@ -49,10 +49,9 @@ class SocialmediasController extends Controller {
             'sequence' => 'required'
         ] );
 
-        $socialmedia->type = $attributes[ 'type' ];
-        $socialmedia->details = $attributes[ 'details' ];
+        $socialmedia->logo = $attributes[ 'logo' ];
+        $socialmedia->url = $attributes[ 'url' ];
         $socialmedia->sequence = $attributes[ 'sequence' ];
-        $socialmedia->fontawesomeHTML = $attributes[ 'fontawesomeHTML' ];
         $socialmedia->save();
 
         return redirect( '/console/socialmedias/list' )
