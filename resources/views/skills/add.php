@@ -20,7 +20,7 @@
         <br>
 
         <label for="details">Details:</label>
-        <textarea class="form-control" type="text" name="details" id="details" rows="100">value="<?= old('details') ?>"</textarea>
+        <textarea class="form-control" type="text" name="details" id="details" rows="100"><?= old('details') ?></textarea>
         <span style="color:red;"><?= $errors->first('details'); ?></span>
 
         <script>

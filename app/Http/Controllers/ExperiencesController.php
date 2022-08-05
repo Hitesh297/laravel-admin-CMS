@@ -17,11 +17,11 @@ class ExperiencesController extends Controller {
     }
 
     public function add() {
+        
 
         $attributes = request()->validate( [
             'companyName' => 'required',
             'position' => 'required',
-            'duration' => 'required',
             'responsibilities' => 'required',
             'startDate' => 'required',
             'endDate' => 'required',
@@ -30,7 +30,6 @@ class ExperiencesController extends Controller {
         $experience = new Experience();
         $experience->companyName = $attributes[ 'companyName' ];
         $experience->position = $attributes[ 'position' ];
-        $experience->duration = $attributes[ 'duration' ];
         $experience->responsibilities = $attributes[ 'responsibilities' ];
         $experience->startDate = $attributes[ 'startDate' ];
         $experience->endDate = $attributes[ 'endDate' ];
@@ -51,7 +50,6 @@ class ExperiencesController extends Controller {
         $attributes = request()->validate( [
             'companyName' => 'required',
             'position' => 'required',
-            'duration' => 'required',
             'responsibilities' => 'required',
             'startDate' => 'required',
             'endDate' => 'required'
@@ -59,7 +57,6 @@ class ExperiencesController extends Controller {
 
         $experience->companyName = $attributes[ 'companyName' ];
         $experience->position = $attributes[ 'position' ];
-        $experience->duration = $attributes[ 'duration' ];
         $experience->responsibilities = $attributes[ 'responsibilities' ];
         $experience->startDate = $attributes[ 'startDate' ];
         $experience->endDate = $attributes[ 'endDate' ];

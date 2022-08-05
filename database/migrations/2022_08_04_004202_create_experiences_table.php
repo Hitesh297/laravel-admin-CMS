@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('companyName');
             $table->string('position');
-            $table->string('duration');
             $table->text('responsibilities');
             $table->date('startDate');
             $table->date('endDate');

@@ -6,6 +6,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ContentsController;
 use App\Http\Controllers\SkillsController;
+use App\Http\Controllers\ExperiencesController;
 
 /*
 |--------------------------------------------------------------------------

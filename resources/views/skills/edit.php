@@ -4,7 +4,7 @@
 
     <h2>Add Text Content</h2>
 
-    <form method="post" action="/console/skills/add" novalidate>
+    <form method="post" action="/console/skills/edit/<?= $skill->id ?>" novalidate>
         <?= csrf_field() ?>
 
         <label for="fontawesomeHTML">Font Awesome HTML:</label>
