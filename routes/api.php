@@ -4,6 +4,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Project;
 use App\Models\Content;
+use App\Models\Experience;
+use App\Models\Qualification;
+use App\Models\Skill;
+use App\Models\Socialmedia;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +41,45 @@ Route::get('/contents', function(){
     return $contents;
 
 });
+// http://127.0.0.1:8000/api/experiences
+Route::get('/experiences', function(){
+
+    $experiences = Experience::orderBy('id')->get();
+
+    return $experiences;
+
+});
+// http://127.0.0.1:8000/api/qualifications
+Route::get('/qualifications', function(){
+
+    $qualifications = Qualification::orderBy('id')->get();
+
+    return $qualifications;
+
+});
+// http://127.0.0.1:8000/api/skills
+Route::get('/skills', function(){
+
+    $Skills = Skill::orderBy('sequence')->get();
+
+    return $Skills;
+
+});
+// http://127.0.0.1:8000/api/socialmedia
+Route::get('/socialmedia', function(){
+
+    $socialmedia = Socialmedia::orderBy('id')->get();
+
+    return $socialmedia;
+
+});
+// http://127.0.0.1:8000/api/user
+Route::get('/user', function(){
+
+    $user = User::orderBy('id')->get();
+
+    return $user;
+
+});
+
+
