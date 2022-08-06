@@ -6,9 +6,13 @@ namespace Database\Seeders;
 
 use App\Models\Contactform;
 use App\Models\Content;
+use App\Models\Experience;
+use App\Models\Qualification;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Project;
+use App\Models\Skill;
+use App\Models\Socialmedia;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
@@ -29,6 +33,17 @@ class DatabaseSeeder extends Seeder
         // ]);
         User::factory()->count(2)->create();
         Contactform::factory()->count(5)->create();
+        Content::factory()->count(5)->create();
+        Experience::factory()->count(5)->create();
+        Project::factory()->count(5)->create();
+        Qualification::factory()->count(5)->create();
+        Skill::factory()->count(5)->create();
+        Socialmedia::factory()->count(5)->create();
+
+
+
+
+
         User::create(['first' => 'Hitesh',
         'last' => 'Patel',
         'email' => 'hites.297@gmail.com',
@@ -36,8 +51,6 @@ class DatabaseSeeder extends Seeder
         'password' => bcrypt('password'),
         'remember_token' => Str::random(10)]);
 
-
-        DB::table('projects')->truncate();
         Project::create(['title' => 'Hair Salon',
          'description' => '<p>This Hair Salon website let user to view the services and book appointments. It has a built in CMS that allows admin to manage details of service, employees and appointments.</p>',
          'technologies' => '.Net, Entity Framework, Bootstrap, SQL',
@@ -46,7 +59,6 @@ class DatabaseSeeder extends Seeder
          'photo' => 'https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2016Q4/8-steps-to-build-a-project-management-timeline@2x.png',
          'sequence' => 0]);
 
-         DB::table('contents')->truncate();
          Content::create(['content' => '<p>Hello My name is Hitesh, Welcome to my portfolio!!!!!!!</p>','type' => 'Contact']);
          Content::create(['content' => '<p>I\'m a sofware engineer specializing in developing web apps on .net framework. I\'m focused on developing solutions that are sustainable, extensible and user friendly.</p>',
          'type' => 'Hero']);
