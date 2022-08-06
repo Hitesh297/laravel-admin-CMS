@@ -60,7 +60,7 @@
                 </a>
             </li>
             <li>
-                <a href="/console/logout">
+                <a href="/auth/logout">
                     <div class="dashboard-item">
                         Logout
                     </div>

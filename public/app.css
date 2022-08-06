@@ -132,14 +132,14 @@ textarea {
     box-sizing: border-box;
 }
 
-/* input {
-    border-radius: 0;
+input {
+    border-radius: 5px;
     font-size: 14px;
     padding: 5px;
-    width: 100%;
+    width: 20%;
     margin: 0 0 10px 0;
     box-sizing: border-box;
-} */
+}
 
 input[type=submit] {
     border: 0;

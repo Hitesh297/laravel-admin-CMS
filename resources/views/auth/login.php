@@ -26,7 +26,8 @@
                     <?php endif; ?>
                 </div>
 
-                <button type="submit">Log In</button>
+                <!-- <button type="submit">Log In</button> -->
+                <input type="submit" value="Log In">
 
             </form>
 
