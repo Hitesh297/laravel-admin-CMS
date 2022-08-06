@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Project;
+use App\Models\Content;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,13 @@ Route::get('/projects', function(){
     $projects = Project::orderBy('id')->get();
 
     return $projects;
+
+});
+// http://127.0.0.1:8000/api/contents
+Route::get('/contents', function(){
+
+    $contents = Content::orderBy('id')->get();
+
+    return $contents;
 
 });
