@@ -19,7 +19,7 @@ class ContactformFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'message' => $this->faker->text(),
+            'message' => $this->faker->text($maxNbChars = 100),
         ];
     }
 }

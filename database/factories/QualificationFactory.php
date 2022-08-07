@@ -18,7 +18,7 @@ class QualificationFactory extends Factory
     {
         return [
             'credential' => $this->faker->text($maxNbChars = 20),
-            'details' => $this->faker->text(),
+            'details' => $this->faker->text($maxNbChars = 100),
             'yearCompleted' => $this->faker->numberBetween($min = 2015, $max = 2022),
         ];
     }

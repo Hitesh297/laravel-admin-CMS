@@ -19,7 +19,7 @@ class ExperienceFactory extends Factory
         return [
             'companyName' => $this->faker->name(),
             'position' => $this->faker->unique()->word(),
-            'responsibilities' => $this->faker->text(),
+            'responsibilities' => $this->faker->text($maxNbChars = 100),
             'startDate' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'endDate' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
         ];

@@ -17,7 +17,7 @@ class ContentFactory extends Factory
     public function definition()
     {
         return [
-            'content' => $this->faker->text(),
+            'content' => $this->faker->text($maxNbChars = 100),
             // 'type' => $this->faker->name(),
             'type' => $this->faker->randomElement(['Hero','AboutMe','Contact']),
         ];

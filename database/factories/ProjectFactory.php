@@ -18,8 +18,8 @@ class ProjectFactory extends Factory
     {
         return [
             'title' => $this->faker->word(),
-            'description' => $this->faker->text(),
-            'technologies' => $this->faker->text(),
+            'description' => $this->faker->text($maxNbChars = 100),
+            'technologies' => $this->faker->text($maxNbChars = 100),
             'gitUrl' => $this->faker->url(),
             'liveUrl' => $this->faker->url(),
             // 'photo' => $this->faker->imageUrl($width = 640, $height = 480),
