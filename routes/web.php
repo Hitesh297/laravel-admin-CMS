@@ -32,12 +32,12 @@ Route::get('/auth/login', [AuthController::class, 'loginForm'])->middleware('gue
 Route::post('/auth/login', [AuthController::class, 'login'])->middleware('guest');
 Route::get('/auth/dashboard', [AuthController::class, 'dashboard'])->middleware('auth');
 
-Route::get('/console/users/list', [UsersController::class, 'list']);
-Route::get('/console/users/add', [UsersController::class, 'addForm']);
-Route::post('/console/users/add', [UsersController::class, 'add']);
-Route::get('/console/users/edit/{user:id}', [UsersController::class, 'editForm'])->where('user', '[0-9]+');
-Route::post('/console/users/edit/{user:id}', [UsersController::class, 'edit'])->where('user', '[0-9]+');
-Route::get('/console/users/delete/{user:id}', [UsersController::class, 'delete'])->where('user', '[0-9]+');
+Route::get('/console/users/list', [UsersController::class, 'list'])->middleware('auth');
+Route::get('/console/users/add', [UsersController::class, 'addForm'])->middleware('auth');
+Route::post('/console/users/add', [UsersController::class, 'add'])->middleware('auth');
+Route::get('/console/users/edit/{user:id}', [UsersController::class, 'editForm'])->where('user', '[0-9]+')->middleware('auth');
+Route::post('/console/users/edit/{user:id}', [UsersController::class, 'edit'])->where('user', '[0-9]+')->middleware('auth');
+Route::get('/console/users/delete/{user:id}', [UsersController::class, 'delete'])->where('user', '[0-9]+')->middleware('auth');
 
 
 Route::get('/console/projects/list', [ProjectsController::class, 'list'])->middleware('auth');
