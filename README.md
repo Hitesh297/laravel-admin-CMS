@@ -1,3 +1,18 @@
+##Steps to run
+1. Create .env file and update DB details (make sure you have mysql server running on your system). You can use tools like MAMP or XAMP to create mysql server.
+2. Run below command to install package
+```
+composer install
+```
+3. Run below command to create tables and seed data
+```
+php artisan migrate:refresh --seed
+```
+4. Run below command to start the server
+```
+php artisan serve
+```
+
 ## Hosting
 Live site at [http://shielded-river-60872.herokuapp.com/](http://shielded-river-60872.herokuapp.com/)
 
