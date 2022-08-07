@@ -1,4 +1,4 @@
-##Steps to run
+## Steps to run
 1. Create .env file and update DB details (make sure you have mysql server running on your system). You can use tools like MAMP or XAMP to create mysql server.
 2. Run below command to install required packages
 ```
