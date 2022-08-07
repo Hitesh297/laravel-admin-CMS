@@ -28,7 +28,7 @@ Route::get('/', function () {
 
 
 Route::get('/auth/logout', [AuthController::class, 'logout'])->middleware('auth');
-Route::get('/auth/login', [AuthController::class, 'loginForm'])->middleware('guest');
+Route::get('/auth/login', [AuthController::class, 'loginForm'])->middleware('guest')->name('login');
 Route::post('/auth/login', [AuthController::class, 'login'])->middleware('guest');
 Route::get('/auth/dashboard', [AuthController::class, 'dashboard'])->middleware('auth');
 
