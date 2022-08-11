@@ -136,57 +136,57 @@ class DatabaseSeeder extends Seeder
             'type' => 'Frameworks',
             'details' => '<p>.Net, .Net Core, React, Node, Laravel</p>',
             'sequence' => 1,
-            'fontawesomeHTML' => '<i class=\"fa-solid fa-circle-nodes\"></i>'
+            'fontawesomeHTML' => "<i class=\"fa-solid fa-circle-nodes\"></i>"
         ]);
         Skill::create([
             'type' => 'Javascript',
             'details' => '<p>React, Express, jQuery</p>',
             'sequence' => 2,
-            'fontawesomeHTML' => '<i class=\"fa-brands fa-js-square\"></i>'
+            'fontawesomeHTML' => "<i class=\"fa-brands fa-js-square\"></i>"
         ]);
         Skill::create([
             'type' => 'Languages',
             'details' => '<p>C#, PHP, TypeScript</p>',
             'sequence' => 3,
-            'fontawesomeHTML' => '<i class=\"fa-solid fa-code\"></i>'
+            'fontawesomeHTML' => "<i class=\"fa-solid fa-code\"></i>"
         ]);
         Skill::create([
             'type' => 'Design',
             'details' => '<p>CSS, Photoshop</p>',
             'sequence' => 4,
-            'fontawesomeHTML' => '<i class=\"fa-solid fa-compass-drafting\"></i>'
+            'fontawesomeHTML' => "<i class=\"fa-solid fa-compass-drafting\"></i>"
         ]);
         Skill::create([
             'type' => 'Database',
             'details' => '<p>SQL Server, IBM DB2, Mongo</p>',
             'sequence' => 5,
-            'fontawesomeHTML' => '<i class=\"fa-solid fa-database\"></i>'
+            'fontawesomeHTML' => "<i class=\"fa-solid fa-database\"></i>"
         ]);
         Skill::create([
             'type' => 'Tools',
             'details' => '<p>Visual Studio, VS Code, Git, Jenkins,IBM Data Studio, SQL Server, VersionOne</p>',
             'sequence' => 6,
-            'fontawesomeHTML' => '<i class=\"fa-solid fa-screwdriver-wrench\"></i>'
+            'fontawesomeHTML' => "<i class=\"fa-solid fa-screwdriver-wrench\"></i>"
         ]);
 
 
         Socialmedia::create([
-            'logo' => '<i class=\"fa-brands fa-500px social\"></i>',
+            'logo' => "<i class=\"fa-brands fa-500px social\"></i>",
             'url' => 'https://500px.com/p/hites297',
             'sequence' => 1
         ]);
         Socialmedia::create([
-            'logo' => '<i class=\"fa-brands fa-linkedin social\"></i>',
+            'logo' => "<i class=\"fa-brands fa-linkedin social\"></i>",
             'url' => 'https://www.linkedin.com/in/hitesh-patel-dev/',
             'sequence' => 2
         ]);
         Socialmedia::create([
-            'logo' => '<i class=\"fa-brands fa-instagram social\"></i>',
+            'logo' => "<i class=\"fa-brands fa-instagram social\"></i>",
             'url' => 'https://www.instagram.com/patelhitt/',
             'sequence' => 3
         ]);
         Socialmedia::create([
-            'logo' => '<i class=\"fa-brands fa-github social\"></i>',
+            'logo' => "<i class=\"fa-brands fa-github social\"></i>",
             'url' => 'https://github.com/Hitesh297',
             'sequence' => 4
         ]);
