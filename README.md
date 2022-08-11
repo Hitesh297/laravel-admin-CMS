@@ -14,7 +14,7 @@ php artisan serve
 ```
 
 ## Hosting
-Live site at [http://shielded-river-60872.herokuapp.com/](http://shielded-river-60872.herokuapp.com/)
+Live site at [https://hiteshpateladmin.herokuapp.com/](https://hiteshpateladmin.herokuapp.com/)
 
 ## Code of Conduct
 
