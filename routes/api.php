@@ -10,6 +10,10 @@ use App\Models\Skill;
 use App\Models\Socialmedia;
 use App\Models\User;
 
+
+header('Access-Control-Allow-Origin:  *');
+header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Authorization');
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,60 +30,51 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // http://127.0.0.1:8000/api/projects
-Route::get('/projects', function(){
+Route::get('/projects', function () {
 
     $projects = Project::orderBy('id')->get();
 
     return $projects;
-
 });
 // http://127.0.0.1:8000/api/contents
-Route::get('/contents', function(){
+Route::get('/contents', function () {
 
     $contents = Content::orderBy('id')->get();
 
     return $contents;
-
 });
 // http://127.0.0.1:8000/api/experiences
-Route::get('/experiences', function(){
+Route::get('/experiences', function () {
 
     $experiences = Experience::orderBy('id')->get();
 
     return $experiences;
-
 });
 // http://127.0.0.1:8000/api/qualifications
-Route::get('/qualifications', function(){
+Route::get('/qualifications', function () {
 
     $qualifications = Qualification::orderBy('id')->get();
 
     return $qualifications;
-
 });
 // http://127.0.0.1:8000/api/skills
-Route::get('/skills', function(){
+Route::get('/skills', function () {
 
     $Skills = Skill::orderBy('sequence')->get();
 
     return $Skills;
-
 });
 // http://127.0.0.1:8000/api/socialmedia
-Route::get('/socialmedia', function(){
+Route::get('/socialmedia', function () {
 
     $socialmedia = Socialmedia::orderBy('id')->get();
 
     return $socialmedia;
-
 });
 // http://127.0.0.1:8000/api/user
-Route::get('/user', function(){
+Route::get('/user', function () {
 
     $user = User::orderBy('id')->get();
 
     return $user;
-
 });
-
-
