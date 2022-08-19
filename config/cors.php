@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://www.hiteshpatel.dev', 'https://react-portfolio-mauve-five.vercel.app'],
+    'allowed_origins' => ['https://www.hiteshpatel.dev', 'https://react-portfolio-mauve-five.vercel.app', 'http://localhost:3000'],
 
     'allowed_origins_patterns' => [],
 
