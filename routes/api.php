@@ -26,7 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // http://127.0.0.1:8000/api/projects
-Route::middleware('cors')->get('/projects', function () {
+Route::get('/projects', function () {
 
     $projects = Project::orderBy('sequence')->get();
 
