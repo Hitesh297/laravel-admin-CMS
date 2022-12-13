@@ -31,46 +31,46 @@ Route::get('/projects', function () {
     $projects = Project::orderBy('sequence')->get();
 
     return $projects;
-});
+})->middleware('cors');
 // http://127.0.0.1:8000/api/contents
 Route::get('/contents', function () {
 
     $contents = Content::orderBy('id')->get();
 
     return $contents;
-});
+})->middleware('cors');
 // http://127.0.0.1:8000/api/experiences
 Route::get('/experiences', function () {
 
     $experiences = Experience::orderBy('id')->get();
 
     return $experiences;
-});
+})->middleware('cors');
 // http://127.0.0.1:8000/api/qualifications
 Route::get('/qualifications', function () {
 
     $qualifications = Qualification::orderBy('id')->get();
 
     return $qualifications;
-});
+})->middleware('cors');
 // http://127.0.0.1:8000/api/skills
 Route::get('/skills', function () {
 
     $Skills = Skill::orderBy('sequence')->get();
 
     return $Skills;
-});
+})->middleware('cors');
 // http://127.0.0.1:8000/api/socialmedia
 Route::get('/socialmedia', function () {
 
     $socialmedia = Socialmedia::orderBy('id')->get();
 
     return $socialmedia;
-});
+})->middleware('cors');
 // http://127.0.0.1:8000/api/user
 Route::get('/user', function () {
 
     $user = User::orderBy('id')->get();
 
     return $user;
-});
+})->middleware('cors');
